@@ -1,0 +1,10 @@
+service: "predict.py:svc"
+labels:
+  owner: emma
+  project: heart-disease
+include:
+- "*.py"
+python:
+  packages:
+    - sklearn
+    - pydantic
