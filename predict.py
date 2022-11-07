@@ -20,7 +20,6 @@ model_ref = bentoml.sklearn.get("heart_disease_model:latest")
 dv = model_ref.custom_objects["dictVectorizer"]
 model_runner = model_ref.to_runner()
 
-
 svc = bentoml.Service("heart_disease_classifier", runners=[model_runner])
 
 @svc.api(input=JSON(pydantic_model=HeartDisease), output=JSON())
