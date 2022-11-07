@@ -70,13 +70,8 @@ X_test = dv.transform(test_dict)
 model = LogisticRegression(max_iter=1500, solver='liblinear', penalty='l1')
 model.fit(X_train, y_train)
 
-# Prediction
-
-y_pred = model.predict_proba(X_test)[:, 1]
-auc = roc_auc_score(y_test, y_pred)
-
-print("logistic regression roc_auc:", auc)
-
 # Saving the model
 
 bentoml.sklearn.save_model('heart_disease_model', model, custom_objects={"dictVectorizer": dv})
+
+print("Logistic regression model has been trained and saved to the model store (a local directory managed by BentoML) with the name heart_disease_model")

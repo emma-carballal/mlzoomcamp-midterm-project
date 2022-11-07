@@ -28,8 +28,9 @@ async def classify(heartdisease_application):
     vector = dv.transform(application_data)
     prediction = await model_runner.predict.async_run(vector)
     result = prediction[0]
+    print(prediction)
 
-    if result == 0:
-        return {"status" : "Normal heart"}
+    if result >= 0.5:
+        return {"status" : "Heart disease"}
     else:
-        return {"status": "Heart disease"}
+        return {"status": "Normal heart"}
