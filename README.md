@@ -17,7 +17,7 @@ Create and activate an environment for the project, for example with with anacon
 
 ```conda create --name heartdisease```
 
-Install bentoml in your environment together with the dependencies required to run this model.
+Install BentoML in your environment together with the dependencies required to run this model.
 
 ```pip install bentoml scikit-learn pandas pydantic```
 
@@ -36,9 +36,10 @@ Serve the bento with the service locally.
 
 ```bentoml serve heart_disease_classifier:latest --production```
 
-And access the API on [http://localhost:3000](http://localhost:3000)
+And access the API on http://localhost:3000
 
-Test the service API in the "Try it out" paste the following data in the request body:
+Test the service API in the "Try it out" section, pasting the following data in the request body:
+
 ```{
     "sex": "Female",
     "dataset": "Hungary",
@@ -53,4 +54,5 @@ Test the service API in the "Try it out" paste the following data in the request
     "thalch": 150.0,
     "oldpeak": 0.0
 }```
+
 Is this patient at risk of heart disease?
