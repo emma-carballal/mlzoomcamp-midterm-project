@@ -40,7 +40,8 @@ And access the API on http://localhost:3000
 
 Test the service API in the "Try it out" section, pasting the following data in the request body:
 
-```{
+```
+{
     "sex": "Female",
     "dataset": "Hungary",
     "cp": "atypical angina",
@@ -53,6 +54,7 @@ Test the service API in the "Try it out" section, pasting the following data in 
     "chol": 219.0,
     "thalch": 150.0,
     "oldpeak": 0.0
-}```
+}
+```
 
 Is this patient at risk of heart disease?
