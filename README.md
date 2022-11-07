@@ -9,7 +9,7 @@ The data preparation, EDA, model selection and fine-tuning process is contained 
 
 The model has been saved, built and dockerized with [BentoML](https://github.com/bentoml/BentoML), an open-source library that enables users to create a machine learning-powered prediction service easily.
 
-Te prediction API has been deployed on AWS Elastic Container Service and you can test it [here](http://54.152.57.142:3000/). An example of a json data query is provided in the `predict_test.py` file.
+The prediction API has been deployed on AWS Elastic Container Service and you can test it [here](http://54.152.57.142:3000/). An example of a json data query is provided in the `predict_test.py` file.
 
 ## How to run the project
 ### Train and save the model
