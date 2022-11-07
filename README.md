@@ -14,17 +14,26 @@ Te prediction API has been deployed on AWS Elastic Container Service and you can
 ## How to run the project
 ### Train and save the model
 Create and activate an environment for the project, for example with with anaconda.
+
 ```conda create --name heartdisease```
+
 Install bentoml in your environment together with the dependencies required to run this model.
+
 ```pip install bentoml scikit-learn pandas pydantic```
+
 To train the model, execute the ``train.py`` file.
+
 ```python train.py```
+
 The model will be saved in a local directory managed by BentoML where it will be fetched to build the bento.
 
 ### Build and serve a bento
 In order to serve an API, build the service and the model into a bento.
+
 ```bentoml build```
+
 Serve the bento with the service locally.
+
 ```bentoml serve heart_disease_classifier:latest --production```
 
 And access the API on [http://localhost:3000](http://localhost:3000)
